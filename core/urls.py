@@ -8,4 +8,4 @@ urlpatterns = [
     path('', home, name='home'),
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
