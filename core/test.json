@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "intersteller-abud",
+  "private_key_id": "15010f2723f0d95f495508df8751ae07d7f611c1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+kSuk5c5IS0dL\nMoL9Xw+yxv7Sjg6n8dNDURUxBbKHvO4gNSDyL5jl03RbNQy3urCHuXMsoPrNNm7B\nLoyxHGrLyAtafOf0WDr2Mc16MKTQg2tdiqm4eXf32u/PZu7Vl0pI+8RW90txO2V1\nj+gE3NKz1q44NRMK0qiSW1cxLjlH+zZXJMKg3qK8I+3ob/XI3cMi/q1klx6YKEYp\n1zqvVob8xJnIj72mT96qOo0mEsVln6Xpcm1UVkNlvU1X1fUQF+3zEvvxmmNrRWvd\n96PX5Lf2H0kG7L/e16EmKYdn2Lq3otSVZVDw/9XYH0gTFNVHRmEaRT5EbptN40AC\nS7hYgmrxAgMBAAECggEAJe1ICaVIARjkW0m2Cr3G5s6WjCrELXYiVQE37b4DymKW\nZPgV8sV40XLcc0OTYKSp+hU1YDI4wCtfbxi33Q76DU0mv09hLb76myGN0s4IG0yw\ni1krzqB0OTLMbBOBIKbf3Lco3CMTE3neB0AJDiCx2aN2II8ll0+WR6ygpZPcyB+V\nrOOjQP4oWF1GKcslttGcy+FczbghD6D7dzUuHiY0dB9NAobxWIobfz+vAGsMG0yy\nlVLxM4C7VOxhF5aOQo3XbMn4g19YQoih+bnjcrx1qiP9VwOgZC/fOuZVNCJ9KK57\nsZ4CxPyQxbOmZwy2CGaesrmfyLRmFqvO31Bb1rXwLQKBgQDxYxKoT5j78jeNqVZN\nhOPaliG9M61s8rs2U/Cs3hoKZhVLx0Hs3ObJr8nUEYZGaKfc5i2JVoI8KdJIT63c\nEKlwNNQCY/A6fOiJbD5GEGETR/WL89DB5CcPsYGXjL5QiGHvnqFu1uvCWkQc8HW0\nXGzUXYGDpTkBB7FBFj+qrdq6TQKBgQDKGoJMPHgcX64UTGa3ujUzB60KMfveMccl\n4fzsIOLboEC7vPk0vhivIHHJqH8Kjw98s9kQcB4dGHKpX9ZfrqtcH9po71EXBNkB\nbaEus5b30D9KFvi76dq5Rgfi7p+VS//WlIwvGUMhuIrbjblVfHMk1cNXV4/zJ1u/\nGjmTQuu9NQKBgQCQSj+R2prBJ+WrSWjsR56IQCwE1Ao70NC1xfFc9Bqu0pyyQnaW\n5ukR8IF9wcf4+IA3HGRl7w9EdV9cmDx+CnuuNfXxQ9oKrDW4R7rl2M6eXupZcTH9\nZKswx1OGyrvMmemo+bLX9aLR93E1t0s0t/bZ7tcHYVE022tKU8lU9j2EFQKBgHJv\n4jmyv7wpPVPHEx6TdI4pmYS9WsWs3/wGY4V89ZewvRbQ4TdJMIbxUx0BqLXc3cMZ\nvx48rgCBmGNpneRd7i/i5XQnln33Q704S107WY+Gvl+AdGVK/IuOKOcJgRkziHED\negEtR8LvUMkTDc9nAXfpBowNS7g+IAgsnE9TRFLFAoGAXZlfC3Pv+/QQpU5Kd7g+\newXDA5vnSvNlp022rDPSvFGLQh1mdpu7elOtmgZNhdH2H19IpC3CB3mMbCG+Ehaw\nouMwaULT/t2yJjkafZSyMYsoKZDwDHbojQgs57ZJHPxK/CQxOnOVbZqeSHCkwREZ\n60R3tvUeyL4SaVuHqNRQrMw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "buywithus-798@intersteller-abud.iam.gserviceaccount.com",
+  "client_id": "114948514473663946468",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/buywithus-798%40intersteller-abud.iam.gserviceaccount.com"
+}

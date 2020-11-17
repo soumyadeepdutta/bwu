@@ -38,10 +38,12 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <!-- chatbot styling-->
+    <!-- chatbot styling -->
     <link href="{% static 'chatbot/css/select2.min.css' %}" rel="stylesheet" type="text/css"/>
     <link href="{% static 'chatbot/css/chatBot.css' %}" rel="stylesheet" type="text/css"/>
     <link href="{% static 'chatbot/css/timeline.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
 
 
 </head>
@@ -220,6 +222,7 @@
     </div>
 </section>
 
+
 <!-- chatbot -->
 <div class="chat-screen">
     <div class="chat-header">
@@ -228,14 +231,14 @@
         </div>
     </div>
     <div class="chat-body">
-        <div class="chat-bubble you">Welcome to our site, if you need help simply reply to this message, we are online and ready to help.</div>
-        <div class="chat-bubble me">Hi, I am back</div>
-        <div class="chat-bubble me">I just want my Report Status.</div>
+        <!-- <div class="chat-bubble you" id='query'>Welcome to our site, if you need help simply reply to this message, we are online and ready to help.</div> -->
+        <div class="chat-bubble me" id='chat_reply'>Welcome</div>
+        <!-- <div class="chat-bubble me">I just want my Report Status.</div> -->
     </div>
     <div class="chat-input">
-        <input type="text" placeholder="Type a message...">
+        <input type="text" placeholder="Type a message..." id="query">
         <div class="input-action-icon">
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        <button><svg xmlns="http://www.w3.org/2000/svg" id="chat" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
         </div>
     </div>
 </div>
@@ -244,20 +247,13 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x "><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
 </div>
 <!-- Chat Bot UI Ends -->
-
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="257be86a981729866f2fa61c-|49" defer=""></script>
 <!-- Time line Html Ends -->
 <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
 <script src="{% static 'chatbot/js/jquery-3.1.1.min.js' %}"></script>
 <script src="{% static 'chatbot/js/popper.min.js' %}"></script>
 <script src="{% static 'chatbot/js/bootstrap.min.js' %}"></script>
-<script src="{%  static 'chatbot/js/select2.min.js' %}"></script>
- <script>
-        $(document).ready(function(){
-            $(".select2_el").select2({
-            });
-        });
-        </script>
+<script src="{% static 'chatbot/js/select2.min.js' %}"></script>
+ 
 <script>
     $(document).ready(function () {
         //Toggle fullscreen
@@ -266,6 +262,23 @@
             $(this).children('svg').toggleClass('animate');
             $('.chat-screen').toggleClass('show-chat');
         });
+        $("#chat").click(function(e){
+            e.preventDefault()
+            // let csrf = $('input[name=csrfmiddlewaretoken]').val()
+            let query = $('#query').val()
+            // console.log(query);
+            question = {query: query}
+            $.ajax({
+                url: "{% url 'webhook' %}",
+                method: "POST",
+                data: question,
+                success: function(response){
+                    $('#query').attr('placeholder', 'Type here..').val(' ')
+                    // console.log(reply)
+                    document.getElementById('chat_reply').innerHTML = response['reply']
+                }
+            })
+        })
     });
 
 </script>
