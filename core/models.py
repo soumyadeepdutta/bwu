@@ -4,7 +4,7 @@ from django.db import models
 class DummyProperty(models.Model):
     country = models.CharField(max_length=5, help_text='Country code')
     price = models.DecimalField(max_digits=10, decimal_places=2, help_text='Price in doller')
-    image = models.ImageField(upload_to='images')
+    image = models.CharField(max_length=255, default='https://images.unsplash.com/photo-1579700432983-39c5fb5815e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1486&q=80')
 
     class Meta:
         verbose_name_plural = 'Dummy Properties'
