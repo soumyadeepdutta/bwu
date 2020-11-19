@@ -198,7 +198,7 @@
                 <div class="col-lg-4 col-sm-6 branding-3 planning-3">
                     <div class="single-portfolio mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
                         <div class="portfolio-image">
-                            <img src="{% static 'core/images/portfolio-1.png' %}" alt="">
+                            <img src="{{property.image.url}}" alt="">
                             <div class="portfolio-overlay d-flex align-items-center justify-content-center">
                                 <div class="portfolio-content">
                                     <div class="portfolio-icon">
@@ -212,7 +212,7 @@
                             </div>
                         </div>
                         <div class="portfolio-text">
-                            <h4 class="portfolio-title"><a href="#">${{ property.cost }}</a></h4>
+                            <h4 class="portfolio-title"><a href="#">${{ property.price }}</a></h4>
                             <p class="text">Located at {{ property.country }}</p>
                         </div>
                     </div> <!-- single portfolio -->
@@ -262,6 +262,7 @@
             $(this).children('svg').toggleClass('animate');
             $('.chat-screen').toggleClass('show-chat');
         });
+        let message = []
         $("#chat").click(function(e){
             e.preventDefault()
             // let csrf = $('input[name=csrfmiddlewaretoken]').val()
@@ -276,8 +277,10 @@
                     $('#query').attr('placeholder', 'Type here..').val(' ')
                     // console.log(reply)
                     document.getElementById('chat_reply').innerHTML = response['reply']
+                    message.push(response['reply'])
                 }
             })
+            console.log(message);
         })
     });
 
