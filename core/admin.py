@@ -1,9 +1,4 @@
 from django.contrib import admin
-from .models import FindHome, GeneralEnquiry, BecomeAnAgent, SellHome, FindAgent
+from .models import DummyProperty
 
-
-admin.site.register(FindHome)
-admin.site.register(SellHome)
-admin.site.register(GeneralEnquiry)
-admin.site.register(FindAgent)
-admin.site.register(BecomeAnAgent)
+admin.site.register(DummyProperty)
