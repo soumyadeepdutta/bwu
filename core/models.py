@@ -11,3 +11,24 @@ class DummyProperty(models.Model):
 
     def __str__(self):
         return self.country + ' ' + str(self.price)
+
+
+class Property(models.Model):
+    country = models.CharField(max_length=10)
+    area = models.TextField(max_length=255, help_text='Area')
+    location = models.CharField(max_length=100)
+    specification = models.CharField(max_length=100, blank=True, null=True)
+    built_year = models.CharField(max_length=30, blank=True, null=True)
+    sold = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.country + ' ' + self.area
+
+
+class User(models.Model):
+    name = models.CharField(max_length=120)
+    email = models.EmailField()
+    
+
+    def __str__(self):
+        return self.name + ' ' + self.email
