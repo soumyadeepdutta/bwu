@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Smart - Multi-purpose Landing Page Template</title>
+    <title>BuyWithUs | Home</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{% static 'core/images/favicon.png' %}" type="image/png">
@@ -93,10 +93,10 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarEight">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="page-scroll" href="#home">support@buywithus.com</a>
+                                    <a class="page-scroll" href="mailto:support@buywithus.com">support@buywithus.com</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="page-scroll" href="#about">(000)-000-0000</a>
+                                    <a class="page-scroll" href="tel:(000)-000-0000">(000)-000-0000</a>
                                 </li>
                             </ul>
                         </div>
@@ -238,7 +238,7 @@
     <div class="chat-input">
         <input type="text" placeholder="Type a message..." id="query">
         <div class="input-action-icon">
-        <button><svg xmlns="http://www.w3.org/2000/svg" id="chat" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
+        <button class="btn btn-secondary btn-sm" id="chat">Send</button>
         </div>
     </div>
 </div>
@@ -265,6 +265,7 @@
         let message = []
         $("#chat").click(function(e){
             e.preventDefault()
+            console.log('Clicked')
             // let csrf = $('input[name=csrfmiddlewaretoken]').val()
             let query = $('#query').val()
             // console.log(query);
@@ -277,6 +278,9 @@
                     $('#query').attr('placeholder', 'Type here..').val(' ')
                     // console.log(reply)
                     document.getElementById('chat_reply').innerHTML = response['reply']
+                    // $("chat_reply").append(
+                    //     "<div class='chat-bubble me' id='chat_reply'>" + response['reply'] + "</div>"
+                    // )
                     message.push(response['reply'])
                 }
             })

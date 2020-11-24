@@ -16,9 +16,8 @@ def webhook(request):
     if request.method == "POST":
         query = request.POST.get('query')
         reply = get_chatbot_reply(query)
-        # print(reply)
         return JsonResponse({'reply': reply})
-        # return HttpResponse('')
+        
 
 @csrf_exempt
 def save(request):
@@ -26,8 +25,8 @@ def save(request):
         req = json.loads(request.body.decode('utf-8'))
         action = req.get('queryResult').get('action')
         context = dict(req.get('queryResult').get('outputContexts')[0])
-        if action == 'find_home.find_home-yes':
-            params = context['parameters']
-            createUser(params)
+        params = context['parameters']
+        user_pk = createUser(params)
+        createResponse(params, user_pk, action)
 
     return JsonResponse({'error' : 'GET Request not accepted'})
