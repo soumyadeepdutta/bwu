@@ -15,4 +15,5 @@ A simple Django based website using Google DialogFlow to power the chatbot
 1. Scrolling out of box
 
 **Deployment**
+
 Project is live on https://buy-with-us.herokuapp.com/
