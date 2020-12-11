@@ -4,14 +4,14 @@ import dialogflow
 from google.api_core.exceptions import InvalidArgument
 
 
-GOOGLE_AUTHENTICATION_FILE_NAME = "test.json"
+GOOGLE_AUTHENTICATION_FILE_NAME = "df.json"
 current_directory = os.path.dirname(os.path.realpath(__file__))
 path = os.path.join(current_directory, GOOGLE_AUTHENTICATION_FILE_NAME)
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = path
 
 # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'test.json'
 
-DIALOGFLOW_PROJECT_ID = 'intersteller-abud'
+DIALOGFLOW_PROJECT_ID = 'bwu-ppsb'
 DIALOGFLOW_LANGUAGE_CODE = 'en'
 SESSION_ID = 'random'
 
