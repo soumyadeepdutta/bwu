@@ -26,7 +26,8 @@ def createUser(params):
 def createResponse(params, user_pk, action):
     prop = Response(
         user = User.objects.get(pk=user_pk),
-        query=action.split('.')[0],
+        query_type=action.split('.')[0],
+        query=params.get('gq') or None,
         age = params.get('propage') or None,
         bhk = params.get('bhk') or None,
         typ = params.get('proptype') or None,

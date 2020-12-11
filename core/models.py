@@ -36,7 +36,8 @@ class User(models.Model):
 
 class Response(models.Model):
     user = models.ForeignKey(User, verbose_name='User', on_delete=models.CASCADE, default=1)
-    query = models.CharField(max_length=200, default=' ')
+    query_type = models.CharField(max_length=120, null=True)
+    query = models.CharField(max_length=200, blank=True, null=True)
     age = models.CharField(max_length=20,  verbose_name='Property Age', blank=True, null=True)
     bhk = models.IntegerField(blank=True, verbose_name='BHK', null=True, help_text='BHK')
     typ = models.CharField(max_length=20, blank=True, null=True,verbose_name='Type', help_text='Property Type')
