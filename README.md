@@ -10,9 +10,8 @@ A simple Django based website using Google DialogFlow to power the chatbot
 5. SPA using AJAX, jQuery
 6. Save user data
 7. Chat Scrolling
-
-**To Be Done**
-1. Scrolling out of box
+8. Scrolling fixed
+9. Dummy properties added
 
 **Deployment**
 
